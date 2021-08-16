@@ -6,6 +6,5 @@ from .views import registration, MyTokenObtainPairView
 urlpatterns = [
     path("register/", registration, name="register"),
     path("token/", MyTokenObtainPairView.as_view(), name="token_obtain_pair"),
-    # path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]

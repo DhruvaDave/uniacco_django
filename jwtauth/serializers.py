@@ -8,8 +8,7 @@ from .signals import log_user_logged_in_success, log_user_logged_in_failed, get_
 
 User = get_user_model()
 
-webhook_url = 'http://www.google.com'
-# https://encrusxqoan0b.x.pipedream.net/
+webhook_url = 'https://encrusxqoan0b.x.pipedream.net/'
 
 
 class UserCreateSerializer(serializers.ModelSerializer):
@@ -28,17 +27,6 @@ class UserCreateSerializer(serializers.ModelSerializer):
         ]
         extra_kwargs = {"password": {"write_only": True}}
 
-#     {
-#   "username": "user1",
-#   "email":"user1@gmail.com",
-#   "password":"123",
-#   "password2": "123"
-# }
-
-# {
-#     "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyODYwMjMwOCwianRpIjoiMTU3OWJmNDgxOTRlNDY1Y2FkNDFjNzA4MWFmNTViNGMiLCJ1c2VyX2lkIjozfQ.sNsQU-EaGVWiOSTh2LE513W50jE4iySzNbR2NMUXMXE",
-#     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI4NTE2MjA4LCJqdGkiOiJlYWUxZTcyMGI2NmM0MGQ2YmFhNTYzOGY3OWM1Y2ZjNCIsInVzZXJfaWQiOjN9.zuz1fccr0E4I37K2Ob2mbv4bvpkZiz6n17keK-82cc0"
-# }
     def create(self, validated_data):
         username = validated_data["username"]
         email = validated_data["email"]
