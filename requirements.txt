@@ -1,0 +1,15 @@
+﻿autopep8==1.4.4
+Django==2.2.24
+django-cors-headers==3.1.1
+django-rest-swagger==2.2.0
+djangorestframework==3.11.2
+djangorestframework-simplejwt==4.3.0
+Jinja2==2.11.3
+PyJWT==1.7.1
+pytz==2019.3
+requests==2.22.0
+simplejson==3.16.0
+sqlparse==0.3.0
+urllib3==1.26.5
+# dj-webhooks==0.4.2
+django-allauth==0.45.0
